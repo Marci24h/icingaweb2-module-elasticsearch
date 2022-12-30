@@ -22,7 +22,7 @@
         </thead>
         <tbody>
         <?php foreach ($events as $event): ?>
-            <tr href="<?= $documentsUri->with(array('index' => $event['_index'], 'type' => $event['_type'], 'id' => $event['_id'])) ?>">
+            <tr href="<?= $documentsUri->with(array('index' => $event['_index'], 'id' => $event['_id'])) ?>">
             <?php foreach ($fields as $getter):
                 $column = $getter($event['_source']);
                 $ellipsis = $this->ellipsis($column, 100);

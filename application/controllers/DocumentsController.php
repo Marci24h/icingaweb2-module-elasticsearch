@@ -11,8 +11,8 @@ class DocumentsController extends Controller
 {
     public function indexAction()
     {
-        $index = $this->params->getRequired('index');
-        $type = $this->params->getRequired('type');
+	$index = $this->params->getRequired('index');
+	$type = "_doc";
         $id = $this->params->getRequired('id');
 
         $instance = (new Instances())
